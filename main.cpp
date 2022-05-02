@@ -31,7 +31,9 @@ int main(){
 	std::string ind1str = ind1after->getString();
 	std::string ind2str = ind2after->getString();
 
-	int maxones = ind2after->getMaxOnes();
+	Individual * indcopy = new Individual(ind2str);
+
+	int maxones = indcopy->getMaxOnes();
 
 	std::cout<<ind1str<<" "<<ind2str<<" "<<maxones<<std::endl;
 		
