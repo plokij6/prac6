@@ -55,9 +55,12 @@ int Individual::getMaxOnes(){
 			
 			
 		}
-		if (copy[i]=='0'&&count>max)
+		if (copy[i]=='0')
 		{
-			max=count;
+			if (count>max)
+			{
+				max=count;
+			}
 			
 			count=0;
 		}
