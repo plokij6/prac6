@@ -40,23 +40,32 @@ void Individual::flipBit(int pos){
 }
 
 int Individual::getMaxOnes(){
+	length=Individual::getLength();
 	
 	int count=0;
 	int max=0;
+
+	
 
 	for (int i = 0; i < length; ++i)
 	{
 		if (copy[i]=='1')
 		{
 			count++;
-		}else{
-			if (count>max)
-			{
-				max=count;
-				count=0;
-			}
+			
 			
 		}
+		if (copy[i]=='0'&&count>max)
+		{
+			max=count;
+			
+			count=0;
+		}
+			
+	}
+	if (count>max)
+	{
+		max=count;
 	}
 	return max;
 }
