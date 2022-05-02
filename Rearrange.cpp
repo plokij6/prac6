@@ -1,6 +1,6 @@
 #include "Rearrange.h"
-#include "Individual.h"
 #include "Mutator.h"
+#include "Individual.h"
 #include <string>
 
 Individual * Rearrange::mutate(Individual *ind, int k){

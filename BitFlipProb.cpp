@@ -14,7 +14,7 @@ Individual * BitFlipProb::mutate(Individual *ind, int k){
 
 	for (int i = 0; i < len; ++i)
 	{
-		randnum=rand();
+		randnum=(double)rand()/RAND_MAX;
 		if (temp[i]=='0'&&randnum<proba)
 		{
 			temp[i]='1';
